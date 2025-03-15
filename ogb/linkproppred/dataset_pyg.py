@@ -72,7 +72,7 @@ class PygLinkPropPredDataset(InMemoryDataset):
 
         # short-cut if split_dict.pt exists
         if os.path.isfile(os.path.join(path, 'split_dict.pt')):
-            return torch.load(os.path.join(path, 'split_dict.pt'), weights_only=False))
+            return torch.load(os.path.join(path, 'split_dict.pt'), weights_only=False)
 
         train = replace_numpy_with_torchtensor(torch.load(osp.join(path, 'train.pt'), weights_only=False))
         valid = replace_numpy_with_torchtensor(torch.load(osp.join(path, 'valid.pt'), weights_only=False))
